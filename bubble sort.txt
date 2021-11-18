@@ -1,0 +1,17 @@
+import array as arr
+c=arr.array('d',[])
+a1=int(input("Enter the students count:"))
+print("Enter the %i first students perctage:"% (a1))
+mark=list(map(int,input().split(",")))
+n=len(mark)
+for i in range(n-1):
+  for j in range(0,n-i-1):
+      if mark[j]>mark[j+1]:
+          var=mark[j]
+          mark[j]=mark[j+1]
+          mark[j+1]=var
+
+print("sorted array is bubble sort:")
+for i in range(len(mark)):
+    print("%0.1d"%mark[i])
+
